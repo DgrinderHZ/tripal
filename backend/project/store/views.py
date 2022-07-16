@@ -26,6 +26,7 @@ def show_products():
 
 
 @bp.route('/product/add', methods=['GET', 'POST'])
+@login_required
 def create_product():
     form = ProductForm(request.form)
     if form.validate_on_submit():

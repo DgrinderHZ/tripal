@@ -25,6 +25,7 @@ def show_posts():
 
 
 @bp.route('/create', methods=['GET', 'POST'])
+@login_required
 def create_post():
     form = PostForm(request.form)
     if form.validate_on_submit():
