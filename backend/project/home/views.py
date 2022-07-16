@@ -18,8 +18,11 @@ def getPosts():
 
 
 @bp.route('/', methods=["GET", "POST"])
-@login_required
 def home():
+    return render_template('index.html')
+
+@bp.show_posts('/blog')
+def show_posts():
     posts = getPosts()
     form = PostForm(request.form)
     if form.validate_on_submit():
@@ -38,8 +41,9 @@ def home():
             db.session.rollback()
         finally:
             db.session.close()
+        
+        return render_template('show_posts.html', posts=posts, form=form)
 
-    return render_template('index.html', posts=posts, form=form)
 
 @bp.route('/welcome')
 def welcome():
