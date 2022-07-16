@@ -15,9 +15,9 @@ def getProducts():
     # cur = db.execute("SELECT * FROM posts;")
     # posts = [dict(title=row[0], description=row[1]) for row in cur.fetchall()]
     # db.close()
-    posts = []
-    posts = Product.query.all()
-    return posts
+    products = []
+    products = Product.query.all()
+    return products
 
 @bp.route('/')
 def show_products():
@@ -25,7 +25,7 @@ def show_products():
     return render_template('show_products.html', products=products)
 
 
-@bp.route('/create', methods=['GET', 'POST'])
+@bp.route('/product/add', methods=['GET', 'POST'])
 def create_product():
     form = ProductForm(request.form)
     if form.validate_on_submit():
@@ -45,4 +45,4 @@ def create_product():
         finally:
             db.session.close()
     
-    return render_template('create.html', form=form)
+    return render_template('create_product.html', form=form)
