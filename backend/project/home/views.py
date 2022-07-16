@@ -21,7 +21,7 @@ def getPosts():
 def home():
     return render_template('index.html')
 
-@bp.show_posts('/blog')
+@bp.route('/blog')
 def show_posts():
     posts = getPosts()
     form = PostForm(request.form)
