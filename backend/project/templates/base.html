@@ -120,10 +120,10 @@
             class="d-flex align-items-center text-dark text-decoration-none"
           >
             <img
-      src="{{ url_for('static', filename='images/logo.png') }}"
-      alt="logo"
-      height="72px"
-    />
+              src="{{ url_for('static', filename='images/logo.png') }}"
+              alt="logo"
+              height="62px"
+            />
               <title>Bootstrap</title>
               <path
                 fill-rule="evenodd"
@@ -137,18 +137,21 @@
 
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <a class="me-3 py-2 text-dark text-decoration-none" href="#"
+              >VR visits</a
+            >
+            <a class="me-3 py-2 text-dark text-decoration-none" href="#"
               >Destinations</a
             >
             <a class="me-3 py-2 text-dark text-decoration-none" href="#"
-              >Things to try</a
+              >Things to do</a
             >
             <a class="me-3 py-2 text-dark text-decoration-none" href="#"
               >Buy a souvenir!</a
             >
-            <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="#">Pricing</a>
             <a
               class="py-2 text-dark text-decoration-none"
-              href="{{ url_for('home.show_posts') }}"
+              href="{{ url_for('blog.show_posts') }}"
               >Blog</a
             >
           </nav>
@@ -175,10 +178,10 @@
           <div class="col-12 col-md">
             <img
               class="mb-2"
-              src="/docs/5.2/assets/brand/bootstrap-logo.svg"
+              src="{{ url_for('static', filename='images/logo.png') }}"
               alt=""
-              width="24"
-              height="19"
+              width="92"
+              height="102"
             />
             <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
           </div>

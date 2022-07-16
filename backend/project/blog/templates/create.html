@@ -3,7 +3,12 @@
 <!-- post form -->
 <h3>Add a Post!</h3>
 <br />
-<form class="form-message" role="form" method="post" action="/">
+<form
+  class="form-message"
+  role="form"
+  method="post"
+  action="{{ url_for('blog.create_post') }}"
+>
   {{ form.csrf_token }}
   <p>
     {{ form.title(placeholder="title") }}
@@ -21,12 +26,4 @@
   </p>
   <button class="btn btn-sm btn-success" type="submit">Post</button>
 </form>
-
-<!-- All posts -->
-<h3>Posts:</h3>
-{% for post in posts %}
-<strong>Title:</strong> {{ post.title }} <br />
-<strong>Post:</strong> {{ post.description }} <br />
-<strong>Author:</strong> {{ post.author.name }} <br />
-<br />
-{% endfor %} {% endblock %}
+{% endblock %}

@@ -1,6 +1,6 @@
 
 export APP_SETTINGS:=config.DevelopmentConfig
-export DATABASE_URL:=postgresql://admin:admin@localhost/posts
+export DATABASE_URL:=postgresql://admin:admin@localhost/tripal
 export FLASK_APP:=project
 
 run:

@@ -35,6 +35,12 @@ app.register_blueprint(auth_bp)
 from project.home.views import bp as home_bp
 app.register_blueprint(home_bp)
 
+from project.blog.views import bp as blog_bp
+app.register_blueprint(blog_bp)
+
+from project.store.views import bp as store_bp
+app.register_blueprint(store_bp)
+
 #############
 ### LOGIN  ##
 #############
