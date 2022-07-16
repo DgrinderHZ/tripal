@@ -42,7 +42,7 @@ def show_posts():
         finally:
             db.session.close()
         
-        return render_template('show_posts.html', posts=posts, form=form)
+    return render_template('show_posts.html', posts=posts, form=form)
 
 
 @bp.route('/welcome')
