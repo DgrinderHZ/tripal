@@ -1,13 +1,4 @@
-{% extends "base.html" %} {% block header %}
-<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-  <h1 class="display-4 fw-normal">TriPal</h1>
-  <p class="fs-5 text-muted">
-    Your Best Trip Pal. <br />
-    We help to quickly find potential destinations and experiences around
-    Tinghir.
-  </p>
-</div>
-{% endblock %} {% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
@@ -39,10 +30,7 @@
         class="d-block w-100 carousel-img"
         alt="..."
       />
-      <div
-        class="carousel-caption d-none d-md-block"
-        style="background-color: rgba(93, 64, 64, 0.563)"
-      >
+      <div class="carousel-caption d-none d-md-block caption-bg">
         <h1 class="display-4 fw-normal">TriPal</h1>
         <p>
           Your Best Trip Pal. <br />
@@ -57,28 +45,28 @@
         class="d-block w-100 carousel-img"
         alt="..."
       />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-md-block caption-bg">
         <h1 class="display-4 fw-normal">TriPal</h1>
-        <p>
+        <h3>
           Your Best Trip Pal. <br />
           We help to quickly find potential destinations and experiences around
           Tinghir.
-        </p>
+        </h3>
       </div>
     </div>
     <div class="carousel-item">
       <img
-        src="{{ url_for('static', filename='images/tinghir1.jpg') }}"
+        src="{{ url_for('static', filename='images/tinghir3.jpg') }}"
         class="d-block w-100 carousel-img"
         alt="..."
       />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-md-block caption-bg">
         <h1 class="display-4 fw-normal">TriPal</h1>
-        <p>
+        <h3>
           Your Best Trip Pal. <br />
           We help to quickly find potential destinations and experiences around
           Tinghir.
-        </p>
+        </h3>
       </div>
     </div>
   </div>

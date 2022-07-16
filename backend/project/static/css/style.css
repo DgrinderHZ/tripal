@@ -2,3 +2,11 @@
   width: 700px;
   height: 500px;
 }
+
+.caption-bg {
+  background-color: rgba(103, 71, 71, 0.399);
+}
+
+.caption-w {
+  width: 700px;
+}
