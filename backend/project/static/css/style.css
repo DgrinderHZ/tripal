@@ -10,3 +10,9 @@
 .caption-w {
   width: 700px;
 }
+
+.under:hover {
+  background-color: rgba(148, 46, 46, 0.134);
+  border-radius: 5%;
+  height: 0.5px;
+}

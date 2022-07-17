@@ -1,6 +1,6 @@
 
-from flask import Blueprint, redirect, render_template, request, url_for, flash
-from flask_login import login_required, login_user, logout_user
+from flask import Blueprint, g, redirect, render_template, request, url_for, flash
+from flask_login import current_user, login_required, login_user, logout_user
 # from decorators import login_required
 from .forms import LoginForm, RegisterForm
 from project import db
@@ -19,9 +19,8 @@ def login():
             if user is not None and user.password == request.form['password']:
                 # session['logged_in'] = True
                 login_user(user)
-                flash('You were logged in. Go Crazy.')
+                current_user.is_authenticated = True
                 return redirect(url_for('home.home'))
-
             else:
                 error = 'Invalid username or password.'
     return render_template('login.html', form=form, error=error)
