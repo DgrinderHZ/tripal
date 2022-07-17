@@ -58,4 +58,4 @@ def logout():
     # session.pop('logged_in', None)
     logout_user()
     flash('You were just logged out!')
-    return redirect(url_for('home.welcome'))
+    return redirect(url_for('home.home'))

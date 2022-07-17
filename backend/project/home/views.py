@@ -13,3 +13,12 @@ bp = Blueprint("home", __name__, template_folder='templates')
 @bp.route('/', methods=["GET", "POST"])
 def home():
     return render_template('index.html')
+
+
+@bp.route('/vr')
+def vr():
+    return render_template('vr.html')
+
+@bp.route('/pricing')
+def pricing():
+    return render_template('pricing.html')

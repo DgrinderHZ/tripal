@@ -136,7 +136,7 @@
           </a>
 
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2 text-dark text-decoration-none under" href="#"
+            <a class="me-3 py-2 text-dark text-decoration-none under" href="{{ url_for('home.vr') }}"
               >VR visits</a
             >
             <a class="me-3 py-2 text-dark text-decoration-none under" href="#"
@@ -148,7 +148,7 @@
             <a class="me-3 py-2 text-dark text-decoration-none under" href="{{ url_for('store.show_products') }}"
               >Find souvenirs!</a
             >
-            <a class="me-3 py-2 text-dark text-decoration-none under" href="#">Pricing</a>
+            <a class="me-3 py-2 text-dark text-decoration-none under" href="{{ url_for('home.pricing') }}">Pricing</a>
             <a
               class=" me-3 py-2 text-dark text-decoration-none under"
               href="{{ url_for('blog.show_posts') }}"
@@ -194,7 +194,7 @@
               width="92"
               height="102"
             />
-            <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+            <small class="d-block mb-3 text-muted">&copy; Mirai.is... 2022 All right reserved.</small>
           </div>
           <div class="col-6 col-md">
             <h5>Features</h5>
