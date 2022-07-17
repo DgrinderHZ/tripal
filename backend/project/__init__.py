@@ -41,6 +41,9 @@ app.register_blueprint(blog_bp)
 from project.store.views import bp as store_bp
 app.register_blueprint(store_bp)
 
+from project.experience.views import bp as experience_bp
+app.register_blueprint(experience_bp)
+
 #############
 ### LOGIN  ##
 #############

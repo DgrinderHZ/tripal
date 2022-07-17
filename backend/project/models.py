@@ -36,6 +36,25 @@ class Product(db.Model):
         return '<title {}'.format(self.title)
 
 
+class Experience(db.Model):
+
+    __tablename__ = "experiences"
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    description = db.Column(db.String, nullable=False)
+
+
+    def __init__(self, title, description, price):
+        self.title = title
+        self.description = description
+        self.price = price
+
+    def __repr__(self):
+        return '<title {}'.format(self.title)
+
+
 class User(db.Model):
 
     __tablename__ = "users"
