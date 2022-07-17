@@ -44,6 +44,7 @@ class Experience(db.Model):
     title = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
     description = db.Column(db.String, nullable=False)
+    reservations = db.relationship("Reservation", backref="experience")
 
 
     def __init__(self, title, description, price):
@@ -55,6 +56,24 @@ class Experience(db.Model):
         return '<title {}'.format(self.title)
 
 
+class Reservation(db.Model):
+
+    __tablename__ = "reservations"
+
+    id = db.Column(db.Integer, primary_key=True)
+    exp_id = db.Column(db.Integer, db.ForeignKey("experiences.id"), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+
+
+    def __init__(self, price, exp_id, user_id):
+        self.exp_id = exp_id
+        self.user_id = user_id
+        self.price = price
+
+    def __repr__(self):
+        return '<title {}'.format(self.title)
+
 class User(db.Model):
 
     __tablename__ = "users"
@@ -64,6 +83,7 @@ class User(db.Model):
     email = db.Column(db.String, unique=True, nullable=False)
     password = db.Column(db.String, nullable=False)
     posts = db.relationship("BlogPost", backref="author")
+    reservations = db.relationship("Reservation", backref="buyer")
 
     def __init__(self, name, email, password) -> None:
         self.name = name
