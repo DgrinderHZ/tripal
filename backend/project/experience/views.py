@@ -21,7 +21,7 @@ def getExperiences():
 @bp.route('/')
 def show_experiences():
     posts = getExperiences()
-    return render_template('show_experiences.html', posts=posts)
+    return render_template('show_experiences.html', experiences=posts)
 
 
 @bp.route('/experience/add', methods=['GET', 'POST'])
